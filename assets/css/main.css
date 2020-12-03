@@ -1,0 +1,148 @@
+/* line 1, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 7, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* line 13, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 23, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.header {
+  height: 80px;
+  background: #002D62;
+}
+
+/* line 26, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.header .logo {
+  font-size: 24px;
+}
+
+/* line 32, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.main-menu ul {
+  display: flex;
+  list-style: none;
+}
+
+/* line 35, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.main-menu ul li + li {
+  margin-left: 16px;
+}
+
+/* line 39, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.main-menu ul li a {
+  padding: 10px;
+}
+
+/* line 41, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.main-menu ul li a:hover {
+  opacity: .6;
+}
+
+/* line 50, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.btn-menu {
+  display: none;
+  width: 50px;
+  height: 50px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #002D62;
+  border-radius: 4px;
+  position: fixed;
+  z-index: 300;
+  top: 15px;
+  right: 15px;
+  border: none;
+  outline: none;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+/* line 68, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.btn-menu span {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  display: block;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  transition: all 0.3s ease-out;
+}
+
+/* line 77, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.btn-menu span:nth-child(3) {
+  margin-bottom: 0;
+}
+
+/* line 85, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.btn-menu-opened span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 10px;
+}
+
+/* line 90, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.btn-menu-opened span:nth-child(2) {
+  opacity: 0;
+}
+
+/* line 93, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+.btn-menu-opened span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -10px;
+}
+
+@media (max-width: 700px) {
+  /* line 102, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+  .btn-menu {
+    display: flex;
+  }
+  /* line 105, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+  .main-menu .menu-links {
+    display: none;
+  }
+  /* line 108, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+  .menu-links.btn-menu-opened {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: #002D62;
+    width: 200px;
+    padding: 80px 0 0px;
+    z-index: 200;
+  }
+  /* line 118, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+  .menu-links.btn-menu-opened li {
+    padding: 16px;
+  }
+  /* line 120, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+  .menu-links.btn-menu-opened li:hover {
+    background-color: #00234b;
+  }
+  /* line 124, ../../Desktop/hamburger-menu-button/assets/scss/main.scss */
+  .menu-links.btn-menu-opened li + li {
+    margin-left: 0px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
